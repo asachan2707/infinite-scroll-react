@@ -11,7 +11,7 @@ const PostsList = () => {
 
     const loadMorePosts = useCallback(async () => {
         setLoading(true);
-        const newPosts = await fetchPosts(page, 10);
+        const newPosts = await fetchPosts(page, 5);
         if (newPosts.length === 0) {
             setHasMore(false); // Set hasMore to false if no more posts are returned
         } else {
